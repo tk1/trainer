@@ -1,0 +1,25 @@
+<template>
+  <div id="app" class="container">
+    <img src="./assets/htwsaar_Logo_LA.png" width="150px">
+    <answers></answers>
+  </div>
+</template>
+
+<script>
+import answers from './components/Answers'
+
+export default {
+  name: 'app',
+  components: {
+    answers
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
