@@ -1,16 +1,34 @@
-# Problem Trainer with Vue
+# Trainer example
 
-## Installation and start
+## Install command line tools
 
-```bash
+``` bash
 npm install vue-cli -g
 npm install loopback-cli -g
+```
 
+## How to start the API server
+
+``` bash
+# API server
 cd api
-npm install
-node .
 
-cd ../trainer
+# install dependencies
 npm install
+
+# serve at localhost:3000
+node .
+```
+
+## How to start the client server
+
+``` bash
+# client
+cd client
+
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
 npm run dev
 ```
