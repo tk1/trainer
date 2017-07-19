@@ -5,10 +5,19 @@
   
     <ul class="nav nav-tabs">
       <li role="presentation" :class="isActive('/training')">
-        <router-link to="/training">Training</router-link>
+        <router-link v-if="session.authenticated" to="/training">Training</router-link>
       </li>
       <li role="presentation" :class="isActive('/info')">
         <router-link to="/info">Info</router-link>
+      </li>
+      <li role="presentation" :class="isActive('/login')">
+        <router-link v-if="!session.authenticated" to="/login">Log In</router-link>
+      </li>
+      <li role="presentation" :class="isActive('/logout')">
+        <router-link v-if="session.authenticated" to="/logout">Log Out</router-link>
+      </li>
+      <li role="presentation" :class="isActive('/signup')">
+        <router-link v-if="!session.authenticated" to="/signup">Sign Up</router-link>
       </li>
     </ul>
   
@@ -17,6 +26,9 @@
 </template>
 
 <script>
+import login from './components/Login'
+import logout from './components/Logout'
+import signup from './components/Signup'
 import training from './components/Training'
 import info from './components/Info'
 import store from './store'
@@ -24,12 +36,18 @@ import store from './store'
 export default {
   name: 'app',
   components: {
+    login,
+    logout,
+    signup,
     training,
     info
   },
   computed: {
     answerCount() {
-      return store.state.answerCount // <1>
+      return store.state.answerCount
+    },
+    session() {
+      return store.state.session
     }
   },
   methods: {

@@ -1,30 +1,30 @@
 {
   "ids": {
-    "User": 1,
-    "AccessToken": 1,
+    "User": 3,
+    "AccessToken": 2,
     "ACL": 1,
     "RoleMapping": 1,
     "Role": 1,
-    "answer": 79,
-    "problem": 2
+    "answer": 86,
+    "problem": 6
   },
   "models": {
-    "User": {},
-    "AccessToken": {},
+    "User": {
+      "1": "{\"password\":\"$2a$10$uGZifU8iYAZ5A6titZJRfeuCAJvC7eqymzL2c4eXhbVmk0ZOs/fmO\",\"email\":\"fb@xxx.com\",\"id\":1}",
+      "2": "{\"password\":\"$2a$10$N7k/GPI6cE3vyQapmSgrRuRNo1o/K/H70orXfjhOKI/.Ezk9vIEMS\",\"email\":\"foo@bar.com\",\"id\":2}"
+    },
+    "AccessToken": {
+      "HH2KDCrFDLNToiJHV1EOvdBuB1vBXGB8xJgLUGN3lFV2Os18GL6KLjxabep6tcuC": "{\"id\":\"HH2KDCrFDLNToiJHV1EOvdBuB1vBXGB8xJgLUGN3lFV2Os18GL6KLjxabep6tcuC\",\"ttl\":1209600,\"created\":\"2017-07-19T14:28:03.122Z\",\"userId\":2}"
+    },
     "ACL": {},
     "RoleMapping": {},
     "Role": {},
     "answer": {
-      "69": "{\"text\":\"3\",\"createdAt\":\"2017-07-05T15:26:09.043Z\",\"problemId\":1,\"id\":69}",
-      "70": "{\"text\":\"4\",\"createdAt\":\"2017-07-05T15:26:15.396Z\",\"problemId\":3,\"id\":70}",
-      "71": "{\"text\":\"28\",\"createdAt\":\"2017-07-05T15:26:21.921Z\",\"problemId\":5,\"id\":71}",
-      "72": "{\"text\":\"5\",\"createdAt\":\"2017-07-05T15:26:27.708Z\",\"problemId\":3,\"id\":72}",
-      "73": "{\"text\":\"4\",\"createdAt\":\"2017-07-05T15:26:32.237Z\",\"problemId\":1,\"id\":73}",
-      "74": "{\"text\":\"5\",\"createdAt\":\"2017-07-10T07:52:35.042Z\",\"problemId\":3,\"id\":74}",
-      "75": "{\"text\":\"34\",\"createdAt\":\"2017-07-10T07:53:06.859Z\",\"problemId\":2,\"id\":75}",
-      "76": "{\"text\":\"5\",\"createdAt\":\"2017-07-10T07:53:20.480Z\",\"problemId\":3,\"id\":76}",
-      "77": "{\"text\":\"5\",\"createdAt\":\"2017-07-10T10:09:23.535Z\",\"problemId\":3,\"id\":77}",
-      "78": "{\"text\":\"4\",\"createdAt\":\"2017-07-19T14:23:59.920Z\",\"problemId\":4,\"id\":78}"
+      "81": "{\"text\":\"1\",\"createdAt\":\"2017-07-10T12:26:07.959Z\",\"problemId\":2,\"id\":81}",
+      "82": "{\"text\":\"3\",\"createdAt\":\"2017-07-10T12:26:14.492Z\",\"problemId\":1,\"id\":82}",
+      "83": "{\"text\":\"12\",\"createdAt\":\"2017-07-10T14:39:18.060Z\",\"problemId\":1,\"id\":83}",
+      "84": "{\"text\":\"11\",\"createdAt\":\"2017-07-12T09:12:17.297Z\",\"problemId\":2,\"id\":84}",
+      "85": "{\"text\":\"3\",\"createdAt\":\"2017-07-19T14:28:10.066Z\",\"problemId\":1,\"id\":85}"
     },
     "problem": {
       "1": "{\"definition\":{\"expression\":\"1+2\"},\"id\":1}",

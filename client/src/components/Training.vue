@@ -73,7 +73,7 @@ export default {
             })
                 .then(response => {
                     that.result = response.data.result
-                    store.commit('increment', that.result) // <1>
+                    store.commit('increment', that.result)
                     bus.$emit('new-answer', response.data)
                     that.answer = ''
                 })
