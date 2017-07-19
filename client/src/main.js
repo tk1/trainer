@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App'
 import { router } from './router'
+import store from './store'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
@@ -15,6 +16,7 @@ new Vue({
     el: '#app',
     template: '<App/>',
     components: { App },
+    store,
     router
 })
 
