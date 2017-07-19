@@ -8,12 +8,14 @@
         <tr>
           <td>Timestamp</td>
           <td>Answer</td>
+          <td>Problem</td>
         </tr>
       </thead>
       <tbody>
         <tr v-for="item in items" v-bind:key="item.id">
           <td>{{item.createdAt | formatDateTime}}</td>
           <td>{{item.text}}</td>
+          <td>{{item.problemId}}</td>
         </tr>
       </tbody>
     </table>
@@ -27,6 +29,7 @@ import { bus } from '../bus.js'
 
 export default {
   name: 'answers',
+  props: ['problemId'],
   data() {
     return {
       title: 'Answer History',
@@ -36,13 +39,13 @@ export default {
   },
   created() {
     this.fetchData()
-    bus.$on('new-answer', this.newAnswer)
+    bus.$on('new-answer', this.fetchData)
   },
   methods: {
     fetchData() {
       var that = this
       that.error = null
-      var url = '/api/answers'
+      var url = `/api/problems/${that.problemId}/answers`
       axios.get(url)
         .then(function (response) {
           that.items = response.data
@@ -50,9 +53,6 @@ export default {
         .catch(function (error) {
           that.error = error.toString()
         })
-    },
-    newAnswer(answer) {
-      this.items.push(answer)
     }
   }
 }

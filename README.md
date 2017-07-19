@@ -1,12 +1,5 @@
 # Trainer example
 
-## Install command line tools
-
-``` bash
-npm install vue-cli -g
-npm install loopback-cli -g
-```
-
 ## How to start the API server
 
 ``` bash
